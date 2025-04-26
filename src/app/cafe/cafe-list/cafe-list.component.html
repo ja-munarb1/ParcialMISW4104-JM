@@ -1,0 +1,50 @@
+<div class="container mt-4">
+
+  <h1 class="fw-bold">El aroma mágico</h1>
+
+  <hr />
+
+  <img
+    src="cafe-hero.jpg"
+    alt="Banner de café"
+    class="img-fluid my-3"
+    style="width: 100%; height: 250px; object-fit: cover;"
+  />
+
+  <div class="row mt-3">
+    <div class="col">
+      <table class="table table-striped">
+        <thead class="table-dark">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Tipo</th>
+            <th scope="col">Región</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let cafe of cafes; index as i">
+            <th scope="row">{{ i + 1 }}</th>
+            <td>{{ cafe.nombre }}</td>
+            <td>{{ cafe.tipo }}</td>
+            <td>{{ cafe.region }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="row mt-3">
+    <div class="col">
+      <p class="fw-bold">Total café de origen: {{ cafesTipoOrigen }}</p>
+      <p class="fw-bold">Total café blend: {{ cafesTipoBlend }}</p>
+    </div>
+  </div>
+</div>
+
+<footer class="footer mt-4 py-3 bg-light mt-auto">
+  <div class="container text-center">
+    <span class="text-muted">Contact us: +57 3102105253 - info&#64;elaromamagico.com - elaromamagico</span>
+  </div>
+</footer>
+
